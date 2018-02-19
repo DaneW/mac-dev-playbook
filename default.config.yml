@@ -6,86 +6,70 @@ configure_sudoers: yes
 configure_terminal: yes
 configure_osx: yes
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: git@github.com:DaneW/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
-dotfiles_repo_local_destination: ~/Dropbox/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
   - .bash_profile
-  - .gitignore
+  - .gitignore_global
   - .inputrc
-  - .osx
-  - .vimrc
+  - .macos
 
 homebrew_installed_packages:
-  # - ansible # Installed via Pip.
-  - autoconf
+  - ant@1.9
+  - aspell
+  - automake
   - bash-completion
-  - chromedriver
-  - doxygen
-  - gettext
-  - gifsicle
+  - ccm
+  - curl
+  - exa
   - git
-  - go
-  - gpg
-  - hub
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
+  - grep
+  - jq
+  - kubernetes-cli
+  - libtool
+  - mas
+  - micro
   - nmap
-  - node
-  - nvm
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
+  - opencv
+  - openssl@1.1
+  - packer
   - pv
+  - pyenv-virtualenvwrapper
+  - rbenv
+  - sshpass
+  - terraform
+  - tmux
+  - watchman
   - wget
-  - wrk
+  - yarn
 
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
-  - homebrew/php
+  - homebrew/science
+  - fabio
 
 homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
-  - docker
-  - dropbox
-  # - fing # Download link keeps getting changed, d'oh!
-  - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - limechat
-  - macvim
-  - sequel-pro
-  - skitch
-  - slack
-  - sublime-text
-  - transmit
-  - vagrant
-  - virtualbox
+homebrew_cask_apps: []
+  # - docker
+  # - dropbox
+  # - firefox
+  # - google-chrome
+  # - slack
+  # - vagrant
+  # - virtualbox
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+mas_installed_apps: [497799835, 406056744, 803453959, 405843582]
 mas_email: ""
 mas_password: ""
 
-osx_script: "~/.osx --no-restart"
+osx_script: "~/.macos --no-restart"
 
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.
-composer_packages: []
-  # - name: drush
-  #   state: present # present/absent, default: present
-  #   version: "^8.1" # default: N/A
-gem_packages: []
-  # - name: bundler
-  #   state: present # present/absent/latest, default: present
-  #   version: "~> 1.15.1" # default: N/A
 npm_packages: []
   # - name: webpack
   #   state: present # present/absent/latest, default: present
