@@ -2,8 +2,8 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: yes
-configure_sudoers: yes
-configure_terminal: yes
+configure_sudoers: no
+configure_terminal: no
 configure_osx: yes
 
 dotfiles_repo: git@github.com:DaneW/dotfiles.git
@@ -37,7 +37,6 @@ homebrew_installed_packages:
   - pv
   - pyenv-virtualenvwrapper
   - rbenv
-  - sshpass
   - terraform
   - tmux
   - watchman
@@ -47,8 +46,6 @@ homebrew_installed_packages:
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
-  - homebrew/science
-  - fabio
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps: []
@@ -61,7 +58,7 @@ homebrew_cask_apps: []
   # - virtualbox
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: [497799835, 406056744, 803453959, 405843582]
+mas_installed_apps: []
 mas_email: ""
 mas_password: ""
 
